@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>File and Folder Standards - Khanlab Wiki</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "File and Folder Standards";
+        var mkdocs_page_input_path = "File \u0026 Folder Standards.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/rust.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Khanlab Wiki
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Khan Lab Wiki</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Compute%20Canada/">Getting started with Compute Canada</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Conferences%20%26%20expense%20claims/">Conference & expense claims</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">File and Folder Standards</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#naming-of-study-files">Naming of Study Files</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#bids">BIDS</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#bids-extensions">BIDS Extensions</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#atlases-templates">Atlases &amp; Templates</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#folder-structure">Folder Structure</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#folder-hierarchy">Folder Hierarchy</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Lab%20Computing/">Computing</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../covid19/">COVID19 - Khan Lab</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../home/">Khan Lab Wiki</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Khanlab Wiki</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>File and Folder Standards</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="file-and-folder-standards">File and Folder Standards</h1>
+<p><strong><em>This page is currently under construction</em></strong></p>
+<p>This document is designed to provide insight into naming conventions and structure of files and folders as stored on Graham. This document will be updated to reflect changes as the standard evolves. The goal is to reduce the number of repeated preprocessing involved when project data is shared amongst a number of users (eg. multiple people running prepdwi on the same dataset for their own use).</p>
+<p>@[toc]</p>
+<h2 id="naming-of-study-files">Naming of Study Files</h2>
+<p>File names conform to the Brain Imaging Data Structure (BIDS). Provided below are links to help get started with BIDS. </p>
+<h3 id="bids">BIDS</h3>
+<ul>
+<li><a href="bids.neuroimaging.io">Brain Imaging Data Structure</a></li>
+<li><a href="bids.neuroimagnig.io/bids_spec.pdf">BIDS Specification</a></li>
+<li><a href="https://github.com/bids-standard/bids-starter-kit">BIDS Starter Kit</a></li>
+</ul>
+<h3 id="bids-extensions">BIDS Extensions</h3>
+<p>Additional links below are for BIDS extensions (eg. ASL, EEG, rs-fMRI, etc.) and are works in progress. They may provide guidance not specified in the current BIDS specification.</p>
+<ul>
+<li><a href="https://docs.google.com/document/d/1Wwc4A6Mow4ZPPszDIWfCUCRNstn7d_zzaWPcfcHmgI4/edit">Common BIDS Derivatives</a></li>
+<li><a href="https://docs.google.com/document/d/15tnn5F10KpgHypaQJNNGiNKsni9035GtDqJzWqkkP6c/edit#heading=h.prrzvwchfio6">Arterial Spin Labelling</a></li>
+<li><a href="https://docs.google.com/document/d/1qMUkoaXzRMlJuOcfTYNr3fTsrl4SewWjffjMD5Ew6GY/edit">Intracranial Electroencephalography</a></li>
+<li><a href="https://docs.google.com/document/d/1YG2g4UkEio4t_STIBOqYOwneLEs1emHIXbGKynx7V0Y/edit#heading=h.mqkmyp254xh6">Structural Preprocessing</a></li>
+<li><a href="https://docs.google.com/document/d/16CvBwVMAs0IMhdoKmlmcm3W8254dQmNARo-7HhE-lJU/edit#heading=h.mqkmyp254xh6">Spaces and Mapping</a></li>
+<li><a href="https://docs.google.com/document/d/1cQYBvToU7tUEtWMLMwXUCB_T8gebCotE1OczUpMYW60/edit#heading=h.mqkmyp254xh6">Diffusion Weighted Imaging Derivatives</a></li>
+</ul>
+<p>The list above is only a small number of BIDS extension proposals which may be relevant. For a detailed list, please see the BIDS website.</p>
+<h2 id="atlases-templates">Atlases &amp; Templates</h2>
+<p><strong>To be added</strong>
+* BIDS-like format
+* Centralized storage?</p>
+<h2 id="folder-structure">Folder Structure</h2>
+<p>Files are stored into specific folders according to two categories:
+1. Unprocessed
+    * <strong>Read-only</strong> folder located at <code>/project/6007967/cfmm-bids/&lt;PI&gt;/&lt;Project&gt;</code></p>
+<ol>
+<li>Preprocessed<ul>
+<li><strong>Writable</strong> folder located at <code>/project/6007967/cfmm-derivatives/&lt;PI&gt;/&lt;Project&gt;</code></li>
+<li>Stores preprocessed data to be shared with the group (eg. fmriprep, prepdwi, etc.)</li>
+<li><em>bids-app exclusive or any processing to be shared?</em></li>
+</ul>
+</li>
+</ol>
+<p>Preprocessed data should indicate the processing that was performed and the version of the BIDS-app used (<code>&lt;bids_app&gt;_&lt;ver&gt;</code>). If processing is dependent on a previous processing step, this can be indicated with an additional tag at the end of the folder structure (<code>&lt;bids_app&gt;_&lt;ver&gt;_&lt;dependency&gt;</code>)</p>
+<p>Examples can be seen below:</p>
+<ol>
+<li>
+<p>Prepdwi (v0.0.11) is run on the unprocessed data acquired under project_1 under pi_1</p>
+<ul>
+<li><code>/project/6007967/cfmm-bids/pi_1/project_1</code> will store the unprocessed files according to BIDS</li>
+<li><code>/project/6007967/cfmm-derivatives/pi_1/project_1/prepdwi_v0.0.11/</code> will contain the files processed using prepdwi.</li>
+</ul>
+</li>
+<li>
+<p>Again, prepdwi (v0.0.11) is run for project_1, but instead is run on the processed gradcorrected files</p>
+<ul>
+<li><code>/project/6007967/cfmm-bids/pi_1/project_1</code> still stores the unprocessed files according to bids</li>
+<li><code>/project/6007967/cfmm-derivatives/pi_1/project_1/gradcorrect_v0.0.2</code> is where the processed gradcorrected files are</li>
+<li><code>/project/6007967/cfmm-derivatives/pi_1/project_1/prepdwi_v0.0.11_gradcorrect</code> stores the prepdwi processed files following gradcorrect<ul>
+<li>Note the additional tag to indicate the gradcorrect dependency</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="folder-hierarchy">Folder Hierarchy</h2>
+<p>The folder hierarchy for cfmm-bids can be found in the example below: </p>
+<pre><code>cfmm-bids
+├── data
+│   ├── PI_1
+│   ├── PI_2
+│   │   ├── Project_1
+│   │   │   ├── sub-001
+│   │   │   │   ├── anat 
+│   │   │   │   │   ├── sub-001_T1w.nii.gz
+│   │   │   │   │   ├── sub-001_T2w.nii.gz
+│   │   │   │   ├── dwi
+│   │   │   │── sub-002
+│   │   │   │── sub-003
+│   │   ├── Project_2
+</code></pre>
+<p>Below is an example of the folder hierarchy for cfmm-derivatives:</p>
+<pre><code>cfmm-derivatives
+├── PI_1
+├── PI_2
+│   ├── Project_1
+│   │   ├── &lt;bids_app&gt;_&lt;ver&gt;
+│   │   ├── prepdwi_v0.0.11
+│   │   │   ├── jobs
+│   │   │   ├── prepdwi
+│   │   │   │   ├── sub-001
+│   │   │   │   │   ├── dwi
+│   │   │   │   │   │   ├── uncorrected_denoise_unring_topup
+│   │   │   │   │   │   │   ├── sub-001_dwi_brainmask.nii.gz
+│   │   │   │   │   │   │   ├── sub-001_dwi_preproc.nii.gz
+│   │   │   │   │   │   │   ├── sub-001_dwi_preproc.bval
+│   │   │   │   │   │   │   ├── sub-001_dwi_preproc.bvec
+│   │   │   │── work
+│   │   │   │   ├── sub-002
+│   ├── Project_2
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../Conferences%20%26%20expense%20claims/" class="btn btn-neutral float-left" title="Conference & expense claims"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Lab%20Computing/" class="btn btn-neutral float-right" title="Computing">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../Conferences%20%26%20expense%20claims/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Lab%20Computing/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

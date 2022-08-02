@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Getting started with Compute Canada - Khanlab Wiki</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Getting started with Compute Canada";
+        var mkdocs_page_input_path = "Compute Canada.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/rust.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Khanlab Wiki
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Khan Lab Wiki</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Getting started with Compute Canada</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#getting-an-account">Getting an account</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#logging-in-and-accessing-your-files">Logging in and accessing your files</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#passwordless-ssh">Passwordless SSH</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mounting-graham-data-locally-with-sshfs">Mounting graham data locally with sshfs</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#windows-sshfs">Windows SSHFS</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#windows-alternative-sftpnetdrive">Windows alternative (sftpnetdrive)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#using-globus-to-transfer-files">Using globus to transfer files</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#setting-group-read-write-permission">Setting group read write permission</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#running-jobs">Running jobs</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#neuroglia-helpers">Neuroglia-helpers</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#submitting-and-monitoring-jobs-directly">Submitting and monitoring jobs directly</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#useful-slurm-commands">Useful SLURM Commands</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#sbatch-instructionsparameters">SBATCH instructions/parameters</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#visualization">Visualization</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#using-grahams-virtual-desktop-to-visualize-your-data">Using Graham's virtual desktop to visualize your data</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#software">Software</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#python">Python</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#creating-and-using-python-virtual-environments">Creating and using python virtual environments</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#matlab-updated-jan-2018">MATLAB (updated Jan 2018):</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#datalad">Datalad</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#getting-started-with-datalad">Getting started with datalad:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#jupyter-notebooks-on-graham">Jupyter Notebooks on Graham</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#installing-jupyter-lab-creating-a-virtual-environment">Installing Jupyter Lab (creating a virtual environment)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#connecting-to-jupyter-notebook">Connecting to Jupyter Notebook</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#experimental-soscip-gpu-access">Experimental: SOSCIP GPU access</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Conferences%20%26%20expense%20claims/">Conference & expense claims</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../File%20%26%20Folder%20Standards/">File and Folder Standards</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Lab%20Computing/">Computing</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../covid19/">COVID19 - Khan Lab</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../home/">Khan Lab Wiki</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Khanlab Wiki</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>Getting started with Compute Canada</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="getting-started-with-compute-canada">Getting started with Compute Canada</h1>
+<p>This document is designed to help new lab members get started with Compute Canada, and also as a reference to existing members. This is a living document, please feel free to add to this, update it, or correct it. Also feel free to add any suggestions or questions you have, there is an empty FAQ section at the bottom of this as well!</p>
+<p>Join the #sharcnet slack channel for up to date info</p>
+<p>@[toc]</p>
+<h2 id="getting-an-account">Getting an account</h2>
+<p>These tools allow you to access servers supported by the Canadian government for research purposes, which are useful for jobs that are very computationally heavy.</p>
+<p>Create an account at: </p>
+<p>https://ccdb.computecanada.ca/security/login</p>
+<p>Make sure to include your Sponsor, Ali Khan (CCI: xkc-513-04). Once Ali accepts your sponsorship request, you can apply for a consortium (the specific server or cluster which you intend to use, in my case, SHARCNET) at:</p>
+<p>https://ccdb.computecanada.ca/me/facilities</p>
+<p>Allow some time for that application to be accepted as well, and for SHARCNET you’ll want to complete the ‘New User’ webinar (register after your application to the consortium has already been accepted). This webinar will require you to use Vidyo (https://freetrial.vidyo.com/web-free-trial/), for which you should use your SHARCNET login information as well. Once you have an account, use the Vidyo link you get upon registration to connect. After your Webinar, SHARCNET will send you a link to an online quiz which will give you privileges to actually use SHARCNET.</p>
+<p>NOTE: you no longer have to apply for a SHARCNET consortium to access graham. Once Ali accepts your sponsorship request you can log in to system with</p>
+<p>ssh <username>@graham.computecanada.ca</p>
+<h2 id="logging-in-and-accessing-your-files">Logging in and accessing your files</h2>
+<p>Login to the system with</p>
+<pre><code>ssh &lt;username&gt;@graham.sharcnet.ca   
+</code></pre>
+<h3 id="passwordless-ssh">Passwordless SSH</h3>
+<p>If you are using sshfs, you should always have passwordless ssh set-up, else you may encounter issues with your IP becoming blacklisted due to too many failed reconnection attempts. </p>
+<p>Follow instructions here: (this worked for me connecting from my Mac to sharcnet)
+https://help.dreamhost.com/hc/en-us/articles/216499537-How-to-configure-passwordless-login-in-Mac-OS-X-and-Linux</p>
+<p>Instructions repeated here:
+1. Generate a ssh keyfile (hit enter when asked for passphrase)</p>
+<pre><code>ssh-keygen -t rsa
+</code></pre>
+<ol>
+<li>Copy this to the remote server</li>
+</ol>
+<pre><code>ssh-copy-id -i ~/.ssh/id_rsa.pub USERNAME@graham.sharcnet.ca
+</code></pre>
+<h3 id="mounting-graham-data-locally-with-sshfs">Mounting graham data locally with sshfs</h3>
+<p>See install instructions here, however, make sure to use the options highlighted below:
+https://www.sharcnet.ca/help/index.php/SSHFS</p>
+<pre><code>mkdir ~/graham;
+sshfs -o reconnect,ServerAliveInterval=15,ServerAliveCountMax=3,follow_symlinks $USER@gra-dtn1.computecanada.ca:/home/$USER ~/graham;
+</code></pre>
+<p>Note: if you are experiencing permission denied issues when accessing some of your files through sshfs, you may need to manually override the uid and gid settings. See below:
+1. On your local system, run <code>id</code> at the command-line to get the numeric id for your <code>uid</code> and <code>gid</code>. Make note of these, will be referred to below as NUID, NGID
+2. add the following option to your sshfs command:</p>
+<pre><code>-o uid=NUID,gid=NGID
+</code></pre>
+<h4 id="windows-sshfs">Windows SSHFS</h4>
+<p>Full details can be found here: https://github.com/greydongilmore/operating_system_installs_mods/blob/master/windows_docs/windows_sshfs.md
+1. Install the latest stable installer of <a href="https://github.com/billziss-gh/winfsp/releases">WinFSP</a>
+2. Install the latest stable installer of <a href="https://github.com/billziss-gh/sshfs-win/releases">SSHFS-Win</a>
+3. Open <strong>File Explorer</strong>, right-click on <strong>This PC</strong> and choose <strong>Map network drive</strong>. Choose a drive to mount at and enter the following in the folder field: <code>\\sshfs\&lt;USER&gt;@graham.computecanada.ca</code> 
+4. Ensure you check the box **Connect using different credientials if your computer login password is different from Graham.
+5. The network drive should then appear in your file explorer!</p>
+<h4 id="windows-alternative-sftpnetdrive">Windows alternative (sftpnetdrive)</h4>
+<ol>
+<li>Google sftpnetdrive</li>
+<li>download the free personal-use version (you only need to provide name and email to download)</li>
+<li>install it with default settings</li>
+<li>login using sharcnet address (e.g. gra-dtn1.computecanada.ca), your sharcnet account and password (or key), and choose a drive name (e.g. I for internet)</li>
+<li>enjoy</li>
+</ol>
+<h3 id="using-globus-to-transfer-files">Using globus to transfer files</h3>
+<p>Log on to globus: https://globus.computecanada.ca
+Click "Endpoints" tab and subsequently subtab "administered by me"
+If no personal endpoints, add "Globus Connect Personal endpoint"
+    Set a Display Name and download the appropriate application for your OS
+Once successful, go to "Transfer Files" tab and set Endpoints depending on direction of transfer
+For transfer to/from graham: use computecanada#graham-dtn</p>
+<h3 id="setting-group-read-write-permission">Setting group read write permission</h3>
+<p>Run these commands the first time you login to a new cluster system to grant <em>group</em> read/write to project folders (to allow easier debugging):</p>
+<pre><code>chgrp -R rrg-akhanf ~/projects/*/$USER; 
+chmod -R g+rwXs ~/projects/*/$USER;
+</code></pre>
+<p>To grant access to your home directory:</p>
+<pre><code>chgrp -R rrg-akhanf ~; 
+chmod -R g+rwXs ~;
+</code></pre>
+<h2 id="running-jobs">Running jobs</h2>
+<h3 id="neuroglia-helpers">Neuroglia-helpers</h3>
+<p>The neuroglia-helpers scripts provide an easier interface to submit jobs, including a bids-app job submission script (bidsBatch). </p>
+<p>To install the neuroglia-helpers scripts - see README here:</p>
+<p>https://github.com/khanlab/neuroglia-helpers/blob/master/README.md</p>
+<h3 id="submitting-and-monitoring-jobs-directly">Submitting and monitoring jobs directly</h3>
+<p>Hello, World! on graham</p>
+<p>Follow the instructions here: https://docs.computecanada.ca/wiki/Running_jobs</p>
+<h4 id="useful-slurm-commands">Useful SLURM Commands</h4>
+<pre><code>squeue -u &lt;username&gt; # see what's on the queue (running/waiting)
+sshare -U &lt;username&gt; # check share usage
+sshare | grep akhanf # check share usage for entire lab
+scancel &lt;jobid&gt; # remove job
+scancel -u &lt;username&gt; # remove all your jobs -- BE CAREFUL.
+sacct -j &lt;jobid&gt; --format JobID,ReqMem,MaxRSS,Timelimit,Elapsed   # check completed job usage
+</code></pre>
+<p>Run the following to set-up your bashrc to enable more readable sacct output:</p>
+<pre><code>echo “export SLURM_TIME_FORMAT=relative” &gt;&gt; ~/.bashrc
+echo “export SACCT_FORMAT=JobID%-20,Start%-10,Elapsed%-10,State,AllocCPUS%8,MaxRSS,NodeList” &gt;&gt; ~/.bashrc
+</code></pre>
+<h4 id="sbatch-instructionsparameters">SBATCH instructions/parameters</h4>
+<p>https://slurm.schedmd.com/sbatch.html</p>
+<p>Important to understand compute node specs and appropriately allocate resources using some combination of parameters like --mem, --cpus-per-task, --ntasks, etc.</p>
+<p>Node types and characteristics here: https://docs.computecanada.ca/wiki/Graham</p>
+<p>The neuroglia-helpers job templates are optimized for the size of nodes and our allocation on graham:</p>
+<p>e.g.:
+* Skinny: 1C/4GB/24hr  (1/32 of a node)
+* Regular: 8C/32GB/24hr   (1/4 of a node)
+* Fat: 32C/128GB/24hr  (whole node)</p>
+<ul>
+<li>Short: 8C/32GB/3hr (Regular, for 3hrs)</li>
+<li>Long: 8C/32GB/72hr (Regular, for 3 days)</li>
+<li>Quick: 1C/4GB/0:10hr (Skinny, for 10 minutes)</li>
+</ul>
+<h2 id="visualization">Visualization</h2>
+<h3 id="using-grahams-virtual-desktop-to-visualize-your-data">Using Graham's virtual desktop to visualize your data</h3>
+<ol>
+<li>Install TigerVNC on your client (https://github.com/TigerVNC/tigervnc/releases)</li>
+<li>Connect to: gra-vdi.computecanada.ca</li>
+<li>If you have neuroglia-helpers installed, you should be able to use fsleyes and itksnap</li>
+</ol>
+<p>Note: This is not a compute node and should only be used for viewing images and light processing. If you want to use VNC for heavier processing, you can request an interactive node and connect via an ssh tunnel (see https://docs.computecanada.ca/wiki/VNC)</p>
+<h2 id="software">Software</h2>
+<h3 id="python">Python</h3>
+<p>Python2 is installed on graham for everyone to use, and you can install packages to your home directory by using the --user flag when you run pip install or python setup.py install. </p>
+<ol>
+<li>Create the local paths for packages:</li>
+</ol>
+<pre><code>mkdir -p  ~/.local/lib/python ~/.local/bin
+</code></pre>
+<ol>
+<li>Set-up the paths in your ~/.bashrc file. Add these lines to your .bashrc file (and re-login afterwards):</li>
+</ol>
+<pre><code>PYTHONPATH=$PYTHONPATH:~/.local/lib/python
+PATH=$PATH:~/.local/bin
+</code></pre>
+<ol>
+<li>Then, to install packages with pip you can use:</li>
+</ol>
+<pre><code>pip install --user &lt;packages&gt;
+</code></pre>
+<p>Or to install a package that has a setup.py file, use:</p>
+<pre><code>python setup.py install --user 
+</code></pre>
+<h4 id="creating-and-using-python-virtual-environments">Creating and using python virtual environments</h4>
+<ol>
+<li>Select python version of your choosing:</li>
+</ol>
+<pre><code>module load python/&lt;version&gt;
+</code></pre>
+<ol>
+<li>Create virtual environment with ( note that ENV is the name of the directory containing your environment, you can name this whatever you want):</li>
+</ol>
+<pre><code>virtualenv --no-download ~/ENV
+</code></pre>
+<ol>
+<li>Active the virtual environment.</li>
+</ol>
+<pre><code>source ~/ENV/bin/activate
+</code></pre>
+<ol>
+<li>Upgrade pip in the environment.</li>
+</ol>
+<pre><code>pip install --no-index --upgrade pip
+</code></pre>
+<ol>
+<li>To exit the virtual environment enter the command deactivate:</li>
+</ol>
+<pre><code>deactivate
+</code></pre>
+<p>more information can be found at: https://docs.computecanada.ca/wiki/Python</p>
+<h3 id="matlab-updated-jan-2018">MATLAB (updated Jan 2018):</h3>
+<p>Request access to Western TAH license on sharcnet by sending an e-mail to bge@sharcnet.ca with your WesternID, sharcnetID, and position (student, post-doc etc).</p>
+<p>Run the following to set-up your environment: </p>
+<pre><code>module load matlab
+</code></pre>
+<p>It is also setup in the neuroglia-core singularity image (shub://khanlab/neuroglia-core)</p>
+<p>For your own singularity images you can add the following to your environment:</p>
+<pre><code>#matlab on graham (requires user to be on sharcnet matlab users list)
+export JAVA_HOME=/cvmfs/soft.computecanada.ca/easybuild/software/2017/Core/java/1.8.0_121
+export MLM_LICENSE_FILE=/cvmfs/restricted.computecanada.ca/config/licenses/matlab/inst_uwo/graham.lic
+export PATH=/cvmfs/restricted.computecanada.ca/easybuild/software/2017/Core/matlab/2017a:/cvmfs/restricted.computecanada.ca/easybuild/software/2017/Core/matlab/2017a/bin:/cvmfs/soft.computecanada.ca/easybuild/software/2017/Core/java/1.8.0_121:/cvmfs/soft.computecanada.ca/easybuild/software/2017/Core/java/1.8.0_121/bin:$PATH
+export _JAVA_OPTIONS=-Xmx256m
+export LIBRARY_PATH=/cvmfs/soft.computecanada.ca/easybuild/software/2017/Core/java/1.8.0_121/lib
+</code></pre>
+<h3 id="datalad">Datalad</h3>
+<p>Datalad (http://datalad.org) is a tool for downloading, working with, and searching through online datasets. For a list of available datasets see http://datasets.datalad.org  </p>
+<p>Datalad datasets are git repositories that you can download, where the large files are symlink placeholders until you use the <code>datalad get</code> command on them to download the full file. </p>
+<h4 id="getting-started-with-datalad">Getting started with datalad:</h4>
+<h5 id="install-datalad-python-package">Install datalad python package:</h5>
+<pre><code>pip install --user --upgrade datalad
+</code></pre>
+<p>Note: there is a singularity container for datalad available, but it had network issues when I tried it.. (AK)</p>
+<h5 id="install-git-annex">Install git-annex:</h5>
+<p>See instructions here: http://git-annex.branchable.com/install/</p>
+<p>If on graham, the linux standalone tarfile is shared, so just need to add this to your .bashrc:
+<code>PATH=/project/6007967/software/git-annex.linux:$PATH</code></p>
+<h5 id="try-it-out-get-a-dataset">Try it out, get a dataset:</h5>
+<p>This command will get the an openneuro datalad dataset (won't download the large files yet):</p>
+<pre><code>datalad install ///openfmri/ds000001
+</code></pre>
+<p>You will see all the files there, but the large ones will be symlinks if you <code>ls -l</code>. To get the files, use <code>datalad get &lt;filename/folder&gt;</code>:</p>
+<pre><code>datalad get ds000001
+</code></pre>
+<p>or to get the files when you install, can use:
+dataset (won't download the large files yet):</p>
+<pre><code>datalad install -g  ///openfmri/ds000001
+</code></pre>
+<h3 id="jupyter-notebooks-on-graham">Jupyter Notebooks on Graham</h3>
+<p>This documentation is for setting up an environment for Jupyter notebooks. It should be noted certain packages have dropped Python 2 support and may require installation of prior module versions. Portions of this documentation has been adapted from Compute Canada documentation (https://docs.computecanada.ca/wiki/Jupyter). This documentation provides the basics to set up a Jupyter environment. For more detailed installation, visit the Compute Canada documentation page.</p>
+<h4 id="installing-jupyter-lab-creating-a-virtual-environment">Installing Jupyter Lab (creating a virtual environment)</h4>
+<ol>
+<li>Load the appropriate Python module (Python 2 or Python 3) and set up a virtual environment (see previous section). Install Jupyter &amp; Jupyter lab to your virtual environment</li>
+</ol>
+<pre><code class="language-BASH">source ~/ENV/bin/activate
+
+pip install jupyter
+pip install jupyterlab
+</code></pre>
+<ol>
+<li>
+<p>Submit the job</p>
+<p><code>regularInteractive</code> supports job submission for Jupyter sessions. Before submitting your job, ensure your virtual environment is activated. Submit your job using the optional flag corresponding to Jupyter! </p>
+</li>
+</ol>
+<pre><code class="language-BASH">regularInteractive -j 
+</code></pre>
+<h4 id="connecting-to-jupyter-notebook">Connecting to Jupyter Notebook</h4>
+<p><strong>From Linux / MacOS</strong></p>
+<p>Compute Canada recommends using the <code>sshuttle</code> Python package to create a tunnel between your compute and the compute cluster. </p>
+<p>On your computer, open a new terminal window and run the following to create the tunnel</p>
+<pre><code class="language-BASH">sshuttle --dns -Nr &lt;user&gt;@graham.computecanada.ca
+</code></pre>
+<p>Then copy and paste the provided URL into your browser. An example URL may look like the following: </p>
+<pre><code class="language-html">http://cdr544.int.cedar.computecanada.ca:8888/?token=7ed7059fad64446f837567e3
+</code></pre>
+<p><strong>From Windows</strong></p>
+<p>A tunnel can be created from Windows via MobaXTerm. This method will also work from any Unix-based system.</p>
+<p>After submitting your Jupyter job, a URL similar to the one on the screen</p>
+<pre><code class="language-BASH">http://cdr544.int.cedar.computecanada.ca:8888/?token=7ed7059fad64446f837567e3
+       └──────────────────┬─────────────────┘        └───────────┬──────────┘
+                      hostname:port                          token
+</code></pre>
+<p>Open a second Terminal tab in MobaXTerm (Session 2). Substitute with the appropriate hostname:port of the URL</p>
+<pre><code class="language-BASH">ssh -L 8888:&lt;hostname:port&gt; &lt;user&gt;@graham.computecanada.ca
+</code></pre>
+<p>Open your browser and go to the following URL, replacing <code>&lt;token&gt;</code> with the token value</p>
+<pre><code class="language-html">http://localhost:8888/?token=&lt;token&gt;
+</code></pre>
+<h2 id="experimental-soscip-gpu-access">Experimental: SOSCIP GPU access</h2>
+<p>More info here:
+https://docs.scinet.utoronto.ca/index.php/Mist</p>
+<h1 id="project-space-migration-may-2020">Project space migration - May 2020</h1>
+<p>With migration from our previous project allocation (rrg-akhanf) to the new larger CFI allocation (contributed system, ctb-akhanf), it is up to us to migrate the project files we want to keep. It is important to make sure migrated folders do not have a large number of small files, since the total number of files is limited.</p>
+<p>With the new space being 600TB and 30M maximum files, a reasonable rule of thumb is that folders with &gt;500 files where the average file size is &lt;20mb should be stored inside a tar file instead. </p>
+<p>We have some new tools to assist with migration from the  <code>rrg-akhanf</code> project space to <code>ctb-akhanf</code>. These are located in neuroglia-helpers.</p>
+<p>Here are step-by-step instructions for performing the migration on your project folder. If you are unsure about any step (especially steps 2-4), STOP and ask for help to avoid any potential loss of data! </p>
+<h2 id="step-1-get-usage-stats">Step 1: Get usage stats</h2>
+<p>First step is to determine which folders can be migrated as-is, and which sub-folders require cleaning up.</p>
+<p>The <code>listusage</code> tool determine the numbers of files and average file size in your folders. This tool prints to the screen (and to a csv file in <code>/scratch/$USER/listusage/...</code>), containing these statistics. </p>
+<p>Run the tool (e.g. on your project folder) using:</p>
+<pre><code>listusage /project/rrg-akhanf/$USER
+</code></pre>
+<p>This command may take a few minutes for larger folders -- can run it without any arguments to see additional options.</p>
+<p>Feel free to share your listusage output with me (Ali), especially if you are unsure about the next steps, or identifying which folders need to be cleaned. </p>
+<h2 id="step-2-remove-any-unneeded-files">Step 2: Remove any unneeded files</h2>
+<p>The <code>listusage</code> output may reveal certain directories that have a high number of files that are no longer needed -- (e.g. outdated analyses, old job directories, etc..). Remove anything you do not need anymore. Do not remove folders with large number of files that you DO need to keep, these can be replaced with TAR archives in a subsequent step. </p>
+<h2 id="step-3-move-and-symlink-folders">Step 3: Move and symlink folders</h2>
+<p>The <code>moveandlink</code> tool migrates folders, and leaves behind a symbolic link on the source project folder to ensure previous paths still function correctly (as long as the rrg-akhanf folder exists).</p>
+<p>Use the dry-run option when you first run the tool to ensure the appropriate actions are being taken.</p>
+<pre><code>moveandlink -n /project/rrg-akhanf/$USER/some_project_folder
+</code></pre>
+<p>By default, moveandlink will not migrate folders with av file size &lt;20mb, but you can use the <code>-f</code> option to force the move. Make sure you proceed with the next step in this case. </p>
+<p>Note: The move operation will be nearly instantaneous, since the files are not physically being moved around (since ctb and rrg folders are still on the same filesystem), but changing the group permission may take some time (depending on number of files). You should see plenty of output on the screen while it is doing this (<code>changed group of ...</code>)</p>
+<h2 id="step-4-tar-folders-with-small-files">Step 4: Tar folders with small files</h2>
+<p>The <code>archivefolders</code> tool will automatically tar-up folders that are below the avg number of files cutoff, submitting batch jobs for each <code>tar</code> job. </p>
+<p>Similar to <code>moveandlink</code>, make sure you run with the dry-run option <code>-n</code> to evaluate the actions:</p>
+<pre><code>archivefolders -n /project/rrg-akhanf/$USER/some_project_folder
+</code></pre>
+<p>NOTE: this tool will not remove the folder, but instead rename (mv) it to *.ARCHIVED. This is to prevent potential data loss and to also give you an opportunity to easily revert. Once you are satisfied with the tarfile replacement, please remove the .ARCHIVED folders yourself.</p>
+<h2 id="making-use-of-archived-data-in-the-future">Making use of archived data in the future</h2>
+<p>The best way to make use of data that has a large number of small files that exist in a tar file on project space, is to extract that folder on scratch, and work with it there.</p>
+<p>e.g. to extract to scratch:</p>
+<pre><code>mkdir /scratch/$USER/some_project_folder
+tar -C /scratch/$USER/some_project_folder/ -xvf /project/ctb-akhanf/$USER/some_project_folder/name_of_tar_file.tar
+</code></pre>
+<p># FAQ</p>
+<ul>
+<li>
+<p>Q1. I am getting a Disk Quota Exceeded error on /project space!</p>
+</li>
+<li>
+<p>A1: Files/folders on the /project space must have the group permission rrg-akhanf to make use of our allocation. Please see the section <a href="#Setting_group_read_write_permission_62">above</a> to reset your group permissions on your files/foldlab</p>
+</li>
+<li>
+<p>Q2.  Singularity images that use python running on graham use python dependencies from the .local directory in my home directory rather than using python dependencies from the image.</p>
+</li>
+<li>
+<p>A2 Python will automatically take dependencies from the .local directory and in order to work around this quirk we can create a new directory called fake_home with symlinks within it that call directories in our home directory (home/$USER) that we would actually like to use. In neuroglia-helpers/cfg/graham.cfg under singularity options add the flag --home followed by the path to the fake_home directory.</p>
+<ol>
+<li>
+<p>Create fake home directory with sym_links.
+     ```BASH
+     cd ~
+     mkdir fake_home
+     cd fake_home</p>
+<p>ln -s <required directory in home/$USER>     #repeat this for as many directories as you require
+ <code>2. Open graham.cfg file and add --home flag to singularity opts with path to fake_home directory. Text after --home represents flag and path to be added to existing script</code>BASH 
+nano ~/neuroglia-helpers/cfg/graham.cfg</p>
+<h1 id="singularity-options">Singularity options</h1>
+<p>SINGULARITY_OPTS="-e -B /cvmfs:/cvmfs -B /project:/project -B /scratch:/scratch -B /localscratch:/localscratch --home /home/$USER/fake_home"
+```</p>
+</li>
+</ol>
+</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Khan Lab Wiki"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Conferences%20%26%20expense%20claims/" class="btn btn-neutral float-right" title="Conference & expense claims">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Conferences%20%26%20expense%20claims/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

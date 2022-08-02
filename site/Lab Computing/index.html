@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Computing - Khanlab Wiki</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Computing";
+        var mkdocs_page_input_path = "Lab Computing.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/rust.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Khanlab Wiki
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Khan Lab Wiki</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Compute%20Canada/">Getting started with Compute Canada</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Conferences%20%26%20expense%20claims/">Conference & expense claims</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../File%20%26%20Folder%20Standards/">File and Folder Standards</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Computing</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#getting-help">Getting Help</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#robarts-it-support">Robarts IT Support</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#lab-it-support">Lab IT support</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#data-and-filesystems">Data and Filesystems</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#best-practices">Best practices</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#deprecated-robarts-imaging-filesystems-eq-nas">Deprecated - Robarts Imaging  Filesystems (eq-nas)</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#installing-software">Installing Software</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#matlab">MATLAB</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#roams-remote-desktop-access">ROAMS (Remote desktop access)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#working-in-linux">Working in Linux</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#preferred-use-the-cbs-server">Preferred: Use the CBS Server</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#1-installing-linux-on-your-workstation">1. Installing Linux on your workstation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-virtual-linux-os">2. Virtual Linux OS</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#setting-up-the-ditto-cfmm-area-printer-in-linux">Setting up the Ditto (CFMM area) printer in Linux</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#windows-subsystem-for-linux-2-wsl-2">Windows Subsystem for Linux 2 (WSL 2)</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../covid19/">COVID19 - Khan Lab</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../home/">Khan Lab Wiki</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Khanlab Wiki</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>Computing</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="computing">Computing</h1>
+<p>@[toc]</p>
+<h2 id="getting-help">Getting Help</h2>
+<h3 id="robarts-it-support">Robarts IT Support</h3>
+<p>For general IT issues (cannot log into your Robarts account, problem with internet connectivity, printing etc) you can contact the Robarts IT helpdesk by sending an e-mail to helpdesk@robarts.ca.  Their website also has information for printing and other common software. 
+http://itcentre.robarts.ca/</p>
+<h3 id="lab-it-support">Lab IT support</h3>
+<p>For lab-specific issues, you can contact Yingli (@yinglilu) on Khanlab slack</p>
+<h2 id="data-and-filesystems">Data and Filesystems</h2>
+<h3 id="best-practices">Best practices</h3>
+<p>Project data, code, and any files you are working on or creating, should be kept on a network filesystem, since these are regularly backed-up. </p>
+<p>Best practice is to use:
+* Github (public/private) for code, scripts, markup docs
+* /scratch filesystem for active projects (&lt;60 days old) 
+* /project filesystem on Graham for long-term imaging data, where smaller files are tarred up
+* Dropbox/OneDrive/Google for any other data, manuscripts etc
+* Your local machine or /scratch for disposable scratch data</p>
+<h4 id="deprecated-robarts-imaging-filesystems-eq-nas">Deprecated - Robarts Imaging  Filesystems (eq-nas)</h4>
+<p>Robarts Imaging has a Windows filesystem which we have used to store some of our data. This system is going to be phased out in the near future, so new study data should utilize Compute Canada instead. It can be accessed from Windows, Mac or Linux, but performance is not very good from Linux, especially when dealing with many files.</p>
+<p>The relevant filesystems, mounted on the imagingsrv.robarts.ca filesystem are:
+<code>EpilepsyDatabase</code>, <code>EpilepsyHistology</code>,<code>khan_Data$</code></p>
+<p>These migrated from eq-nas to imagingsrv in early August 2019. These are being phased out, so no new data should be placed on these drives. </p>
+<ul>
+<li>
+<p>On Windows, You can access these in windows with the URL in explorer:
+<code>\\imagingsrv.robarts.ca\EpilepsyDatabase</code></p>
+</li>
+<li>
+<p>On Mac, you can use the URL:
+smb://imagingsrv.robarts.ca/EpilepsyDatabase
+(enter this in Finder -&gt; Go -&gt; Connect To Server)</p>
+</li>
+<li>
+<p>On Linux, these shares are configured when your machine/user is configured, and should be available in ~/EpilepsyDatabase if you use:
+mount ~/EpilepsyDatabase</p>
+</li>
+</ul>
+<p>Users without root permission:
+* If the link ~/EpilepsyDatabase does not work, your user on that machine has not been configured, contact an admin (currently Ali)</p>
+<p>Users with root access:
+* Make sure you have git and cifs-utils and then use
+<code>git clone http://github.com/akhanf/vasst-dev.git; sudo ./vasst-dev/sys_utils/setupNewUser $USER</code> where $USER is your Robarts username 
+* Then, <code>ln -s /eq-nas/USERNAME/khangrp ~/khangrp</code>
+* Then, <code>mount ~/khangrp</code> and finally, enter your Robarts password</p>
+<h2 id="installing-software">Installing Software</h2>
+<p>Graduate students will have access to install lab-related software on their workstation. Other students will need to request software installation from an administrator (see @alik or @yinglilu)</p>
+<h3 id="matlab">MATLAB</h3>
+<p>Western has a campus-wide MATLAB license. You can sign up for it here 
+http://www.uwo.ca/its/sitelicense/matlab/</p>
+<h3 id="roams-remote-desktop-access">ROAMS (Remote desktop access)</h3>
+<p>If you would like remote access to lab computing resources, please apply for a ROAMS account here:
+https://remote.uwo.ca/</p>
+<p>Instructions
+1. Log in
+2. Request-&gt;Make request
+3. Click start for roams.
+4.  Department is : RRI
+5. Group is : General roams use – Imaging.</p>
+<p>Once your ROAMS account is approved, you can access your workstation the instructions provided by ITS.  This can be used to access your machine via SSH, Windows RDP or RealVNC.</p>
+<h2 id="working-in-linux">Working in Linux</h2>
+<p>Most software for neuroimaging is written for Linux. The preferred way to use Linux is through the CBS Server Virtual Desktop Infrastructure. </p>
+<p>Alternatives are either 1) install Linux on your workstation, 2) use a virtual Linux OS on your Windows/Mac workstation.</p>
+<h3 id="preferred-use-the-cbs-server">Preferred: Use the CBS Server</h3>
+<p>More info here:
+https://osf.io/k89fh/wiki/Computational%20Core%20Server/</p>
+<p>All Khanlab users will automatically be granted access to a standard (light - 4core) account. Please contact me if you need a heavy account (&gt;16core) account.</p>
+<h3 id="1-installing-linux-on-your-workstation">1. Installing Linux on your workstation</h3>
+<p>See Yingli and Ali to discuss a dual-boot install of Ubuntu LTS on your workstation (only recommended for Linux experts, and not recommended in general).</p>
+<h3 id="2-virtual-linux-os">2. Virtual Linux OS</h3>
+<p>Instructions for using Vagrant and Virtualbox are here:
+https://git.cfmm.robarts.ca/cfmm/singularityvagrant</p>
+<h5 id="setting-up-the-ditto-cfmm-area-printer-in-linux">Setting up the Ditto (CFMM area) printer in Linux</h5>
+<ul>
+<li>Open up the search and search for “printers”</li>
+<li>Click “Add” in the top left area</li>
+<li>Click the “Network Printer” tab to expand it</li>
+<li>Scroll down and select “LPD/LPR Host or Printer”</li>
+<li>Under “Host:” type in “zeus.robarts.ca/Imaging-Ditto.imaging.robarts.ca” and click “Forward”</li>
+<li>Stay in “select printer from database” and scroll down to select “Toshiba” and click “Forward”</li>
+<li>Scroll down and select “e-Studio 4500c” and click “Forward”</li>
+<li>Type in a name and description for the printer and click apply</li>
+<li>Print a test page if you’d like</li>
+</ul>
+<h2 id="windows-subsystem-for-linux-2-wsl-2">Windows Subsystem for Linux 2 (WSL 2)</h2>
+<p>Follow the instructions here to set up a Linux environment on Windows! </p>
+<p>https://github.com/greydongilmore/operating_system_installs_mods/blob/master/wsl_docs/WSL2.md</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../File%20%26%20Folder%20Standards/" class="btn btn-neutral float-left" title="File and Folder Standards"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../covid19/" class="btn btn-neutral float-right" title="COVID19 - Khan Lab">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../File%20%26%20Folder%20Standards/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../covid19/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

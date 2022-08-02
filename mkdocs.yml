@@ -1,0 +1,7 @@
+site_name: Khanlab Wiki
+theme:
+    name: readthedocs
+    highlightjs: true
+    hljs_languages:
+        - yaml
+        - rust

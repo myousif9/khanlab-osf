@@ -14,7 +14,7 @@ Create an account at:
 
 https://ccdb.computecanada.ca/security/login
 
-Make sure to include your Sponsor, Ali Khan (CCI: xkc-513-04). Once Ali accepts your sponsorship request, you can apply for a consortium (the specific server or cluster which you intend to use, in my case, SHARCNET) at:
+Make sure to include your Sponsor, Ali Khan (ask him for access). Once Ali accepts your sponsorship request, you can apply for a consortium (the specific server or cluster which you intend to use, in my case, SHARCNET) at:
 
 https://ccdb.computecanada.ca/me/facilities
 
